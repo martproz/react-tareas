@@ -1,0 +1,72 @@
+/* 21) viene de Tarea.js 
+Asignaremos estilo a tarea contenedor,
+tarea-texto y tarea-icono */
+
+/*136) Viene de ListaDeTareas.js*/
+
+/* 137) usamos pseudo-clases: .tarea-contenedor:nth-child(3n + 1) {
+  cada tres elementos, se repite 
+  
+  A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover can be used to change a button's color when the user's pointer hovers over it.
+
+  :nth-child() takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
+  
+  6:56:22 vlc
+  */
+
+.tarea-contenedor {
+  width: 500px;
+  min-width: 65px; /*22) la altura min es para que no se salga el texto del casillero*/
+  background-color: #1b1b32;
+  margin: 5px 0; /* 23) 5px p/ superior e inferior y 0 para izquierdo y derecho */
+  padding: 8px 15px 8px 20px; /*24) sentido agujas reloj*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* Colores */
+
+.tarea-contenedor:nth-child(3n + 1) {
+  background-color: #1b1b32;
+}
+
+.tarea-contenedor:nth-child(3n + 2) {
+  background-color: #2a2a40;
+}
+
+.tarea-contenedor:nth-child(3n + 3) {
+  background-color: #3b3b4f;
+}
+
+/* Texto */
+
+.tarea-texto {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere; /*25) si el texto de la tarea es muy extenso, se cortará y seguirá hacia abajo */
+}
+
+.tarea-icono {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+/*26) vamos a App.js para importar*/
+/*38) viene de Tarea.js*/
+
+/*Tarea completada*/
+.tarea-contenedor.completada {
+  background-color: #5a01a7;
+  /*39) line-through lo tacha*/
+  text-decoration: line-through; 
+}
+/* 40) modificamos en pantalla, inspect, div tarea contenedor y le agregamos la palabra "completada" */
+/*41) Creamos en componentes, TareaFormulario.js*/

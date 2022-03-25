@@ -1,0 +1,8 @@
+/* //65 viene de ListaDeTareas.js */
+/* //66 vamos a ListaDeTareas.js para importar */
+.tareas-lista-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
